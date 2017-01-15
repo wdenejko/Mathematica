@@ -1,0 +1,181 @@
+Opisz dwa przykłady funkcji rysującej wykresy dwoch zmiennych:
+
+Opisz dzialanie funkcji compile:
+    tworzy funkcje skompilowana, 
+    funkcja dekompilowana do c, 
+    przyspiesza dzialanie funkcji, 
+    ogranicza dzialanie funkcji do wartosci numerycznych
+    moze ulatwiac generacje kodu jezykowego
+
+Clickpane Locatorpane 
+
+Czym sie rozni imagecollage od imageassemble -
+    a.  przyjmuje liste i sklada w jeden obraz, argumentem jest lista, 
+        dopasowanie jest dokonywane automatycznie na podstawie dlugosci listy przy czym mozemy zdefiniowac 
+        wagi odpowiednich obrazow
+    b.  przyjmuje liste i laczy ze soba odpowiednie krawedzie.
+
+Parallelsubmit, Waitnext Waitall
+    Obliczenia rownolegle
+    a.  tworzy kolejke dzialan ktore czekaja na swoje wykonanie, arg to dowolne wyrazenie
+        zwraca obiekt ktory jest w formie kolejki i mozemy obserwowac ktore z nich w jakiej kolejnosci beda wykonane
+    b.  komenda bierze zadanie z kolejki, wykonuje je i znika z listy parallelsubmit i mozemy wrzucic do kolejki nowe
+    c.  rozpatruje cala kolejke dzialan, poszczegolne zadania sa konczone w roznych watkach, nastepne dzialanie jest wysylane
+        do nastepnego elementu z kolejki
+
+Roznice miedzy Part a Take
+    a.  obie komendy dotycza list, part bierze konkretna wartosc z tablicy, mozna brac kilka wartosci rozdzielajac je ;;
+        mozna ustalic co ktora wartosc bierzemy
+    b.  take lista liczba calkowita, bierze tyle elementow ile wynosi liczba calkowita, jezeli arg to liczba ujemna
+        to bierze elementy od konca, zwraca tablice
+
+3 przyklady dyrektyw graficznych - definicje ktore sluza do opisania cech obiektu graficznego
+    a.  thickness - grubosc linii albo krawedzie
+    b.  colour - kolory podstawowe RGB, CMYK itp
+    c.  opacity - przezroczystock
+    d.  specularity - wspolczynnik odbicia swiatla w grafice 3d
+    e.  dashing - dla linii
+    f.  arrowheads - groty strzal dla linii
+
+3 opcje srodowiska graficznego w graphics3d
+    a.  aspectratio - proporcje obrazu docelowego domyslnie dla 2d - 4/3
+    b.  frame - ramka wokol wykresu
+    c.  plotrange - okresla pole widzenia tego co jest na grafice
+    d.  axeslabel - labelki he he
+    e.  thicks - znaczniki na osiach
+
+dlaczego setdelete nie powoduje wyswietlenia wyniku
+    definicja opozniona - ma zastosowanie wtedy kiedy odwolamy sie do zdefiniowanego symbolu
+    dopiero wowczas sprawdzane sa wartosci argumentu, jezeli nie sa podane wartosci to zachowana jest forma symboliczna
+    dlatego przy definicji nie mozna podac wyniku bo wynik jeszcze nie istnieje
+    konstrukcja jest uzywana glownie w funkcji
+
+opisz dzialanie konstrukcji Reapsow
+    srodowisko ktore sluzy do monitorowania postepu obliczen, dziala w ten sposob, ze  
+    wewnatrz wyrazenia umieszczamy jakies zdarzenie warunkowe, przy pomocy eventhandler
+    podajemy komende sow, po wykonaniu obliczen, jest zwracana para:
+    funkcja, zbior wartosci
+
+imagecrop i imagetrim
+    obie komendy wycinaja fragment obrazka
+    imagecrop domyslnie bez dodatkowych argumentow wycina jednolita ramke boku tresci obrazka, przy pomocy dodatkowych arg
+    mozna okreslic ile pixeli ma byc odcietych, zazwyczaj zostaje srodek obrazka
+    imagetrim przyjmuje jako arg punkty i wycina z obrazka taki prostokat w ktorym umieszczane sa wszystkie punkty
+
+niech m bedzie lista nie pusta a n bedzie liczba calkowita, jak dzialaja funkcje rotate(m,n), rotateleft(m,n)
+    a.  Dziala na wszystkie wyswietlane obiekty, obraca jest zgodnie z ruchem wskazowek zegara, w tym przypadku o kat n wyrazony
+    w radianach, nie pozbawi opcji edytowania
+    b.  Rotateleft stosuje cykliczna permutacje listy, bierze wyraz listy ktory jest pierwszy stawia go w ostatnie miejsce listy
+    to jest dokonywane n razy, jezeli n jest mniejsze od sumy elementow listy to jest wykonywane modn razy, jezeli jest ujemne
+    to operacja jest wykonywana w prawo
+
+podaj przyklad zastosowania parametricplot3d
+    dziala w ten sposob ze moze wyswietlic 3d wykres funkcji w zaleznosci od jakiegos parametru albo dwoch parametrow
+    czyli argumentem bedzie jakas funkcja ktora zwraca punkty w 3d, jeden lub dwa parametry w zakresie 
+    funkcja zespolona lub funkcja rzeczywista albo mozemy rozrysowanc jakas powloke albo trajektorie ruchu
+
+wyjasnic pojecia Ownvalues, downvalues, subvalues
+    Dorobek scisle mathematicki
+    a.  Ownvalues - wszystkie dotycza wartosci przypisanej jakiemus symbolowi
+    b.  Downvalue - wartosci przypisane wprost, przypisane przez set(=) np a = 5
+    c.  Subvalues - rozszerzenie wartosci dolnej, np a[1] = cos, a[2][b_] = cos - podwartosc
+
+kiedy pojawiaja sie rekursje i jak je ograniczyc
+    pojawiaja sie wtedy jesli funkcja definicji odwoluje sie do samej siebie przy podstawieniu setdelay??
+    w mathematice stosujemy zmienna recursionlimit
+
+dzialanie komend toolkits, statusarea, mouseover
+    glownie w grafice lub w 3d
+    a.  toolkit dziala w ten sposob ze otaczamy jakies wyrazenie ta komenda albo podajemy komentarz, jesli nie podamy
+    to pojawia sie jawna postac tego wyrazenia po najechaniu myszka na obiekt, jezeli podamy to ten komentarz sie pojawia
+    b.  statusarea w ten sam sposob co toolkit, tylko nie dymek kolo kursora tylko informacja w lewym dolnym rogu srodowiska
+    po najechaniu myszka na obiekt
+    c.  przyjmuje dwa wyrazenia, pierwsze jest wyswietlanie domyslne, drugie jest wyswietle po najechaniu myszka na pole pierwszego
+
+dwie opcje przyspieszajace wykresu albo zwiekszajacej jego dokladnosc
+    a.  workingprecision - opcja ustalajaca z jaka dokladoscia sa wykonywane obliczenia arg - liczba calkowita - z dokladnoscia
+    do tulu miejsc sa wykonywane obliczenia, zmienia postac wykresu
+    b.  plotpoints - ustalamy sobie ilosc punktow w ktorej wykres funkcji jest rysowany
+    c.  maxiterations - reguluje wygladzanie funkcji wokol punktu
+
+3 typy transformacji Furiera
+    a.  dyskretna transformacja - dziala na liscie, komenda to Furier, wynikiem jest iloczyn listy z odpowiednia macierza
+    ktora ma elementy typu Omega i, j
+    b. furiertransform - podajemy funkcje, zmienna, zmienna ktora ma byc zwrocona jako argument nowej funkcji
+    jest realizowana w formie całki z wyrazeniem l^i omega t
+    c.  furierseries - sinx cosx tworzymy w ten sposob funkcje periodyczna
+
+dlaczego jezeli jest parallel i do to musimy wypisywac argumenty
+    Parallelize[Do...]
+    Automatycznie zamienia obliczenia na rownolegle i w przypadku petli do jest to z gory przypisywane wartosci licznika
+    petli ktore beda wykonywane przez dane watki programu, moze sie zdarzyc ze te watki beda liczyly z roznymi prekdosciami
+    wyniki beda wyswietlane w kolejnosci zwracanych wartosci przez poszczegolne watki
+
+paralellcombine
+    Dziala w ten sposob ze wartosc funkcji pierwszej jest obliczana przez poszczegolne watki dla kolejnych wartosci z 
+    listy ktora jest drugim arg, te wyniki sa zbierane i potem gdy zakonczone sa obliczenia sa ze soba laczone przez 
+    funkcje.
+
+5 przykladow obiektow graficznych 2d
+    a.  circle[] - srodku 0,0 i promieniu 1
+    b.  line
+    c.  rectangle - dwa punkty i daje prostokat
+    d.  polygon - miedzy trzema punktami, krzywa zamknieta miedzy punktami
+    e.  fieldpolygon - powierzchnia wypelniona tymi punktami
+    f.  point
+
+opisz dzialanie prolog, epilouge
+    pozwalaja nakladac obiekty graficzne na wykresy
+    a. definiuje tło obiektu
+    b. rysowany jest wykres i dopiero potem jest nakladany zdefiniowany obiekt graficznych
+
+dwie komendy sumujace podane w postaci listy
+    a. listplot ktory dziala ze w ukladzie wspol wyrysuowuje konkretne punkty z wartosciami dla danej listy i wartosciami x
+    ktore to pozycje na liscie
+    b. listlineplot sa laczone ze soba linie i dziala na list par liczba
+    c. listplot3d przyjmuje wartosci z tabli dwuwymiarowej [prostokatnej]
+
+3 komendy ustawiajace widok grafice3d
+    a.  viewpoint - podstawienie, punkt w 3d ViewPoint->wartosc okresla polzoenie obserwatora
+    b.  viewcenter - przyjmuje dwa punkty, pierwszy centrum, drugi polozenie obserwatora
+    c.  viewangle - okresla kat objety widokiem obserwatora
+
+komendy join i union
+
+dzialanie komendy outer
+
+part i take - kombinacja 2 komend
+
+dotyczy komend append i appendto
+
+normalize
+
+symbolarvalue i decomposition
+
+definicje funkcje jak sie definiuje itp
+
+dynamicmodule
+
+peacewise picewise?
+
+plotregion
+
+ballsphere, tube, cilinder
+
+implicitregion, boolfunction
+
+interpolation
+
+interpolation polynomial
+
+findfeed
+
+clock, dateobject, animator, trigger wszystko zalezne od czasu
+
+imagefilter
+
+distanctransform, skeletartransform
+
+monitor
+
+paralleltry
